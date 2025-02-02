@@ -1,5 +1,5 @@
 ---
-name: Development Task
+name: Dev Task
 about: Issue template for a development task to be linked to a user story
 title: Developement Task
 labels: enhancement
