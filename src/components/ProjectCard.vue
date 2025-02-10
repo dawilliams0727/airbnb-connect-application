@@ -5,10 +5,12 @@
             Seconds: Challenges Faced
             Third: Technologies Used 
         -->
-        <img src="/src/assets/vue.svg" alt="Vite Logo" class="project-image" />
-        <h3>{{ project.name }}</h3>
-        <h5>{{ project.description }}</h5>
-        <h6> Technologies used: Java, Swift, Postgres, SQL</h6>
+        <img :src="project.image" :alt="project.name" class="project-image" />
+        <div>        
+            <h3>{{ project.name }}</h3>
+            <h5>{{ project.description }}</h5>
+            <a :href="project.repoUrl" target="_blank">SOURCE CODE</a>
+        </div>
     </div>
 </template>
 
@@ -25,15 +27,22 @@ export default {
 </script>
 
 <style scoped>
-.project-card {
-    padding: 20px;
-    text-align: left;
+    h3, h5, a {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+        text-align: center;
+    }
+    .project-image {
+        background-color: rgb(255, 255, 255);
+        height: 200px;
+        max-width: 200px;
+        margin: auto;
+        padding: 0px;
+    }
+    .project-card {
+        margin: 20px;
+        max-width: 200px;
 
-}
-.project-image {
-    background-color: aliceblue;
-    width: 100%;
-    margin: 0 auto;
-    display: block;
-}
+    }
 </style>

@@ -12,5 +12,11 @@ export default {
     },
     getAboutMe(){
         return http.get("/about-me");
+    },
+    getEssays(){
+        return http.get("/essays");
+    },
+    getSkills(){
+        return http.get("/skills");
     }
 }
